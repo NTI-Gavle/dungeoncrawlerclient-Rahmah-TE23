@@ -29,6 +29,7 @@ namespace DungeonCrawlerClient
                 Console.Write(message);
 
                 string command = Console.ReadLine();
+
                 byte[] writeBytes = Encoding.UTF8.GetBytes(command);
                 tcpClient.GetStream().Write(writeBytes, 0, writeBytes.Length);
 
